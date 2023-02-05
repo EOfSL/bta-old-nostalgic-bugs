@@ -1,0 +1,21 @@
+{
+    "schemaVersion": 1,
+    "id": "minecart_boosters_fix",
+    "version": "${version}",
+    "name": "Minecart boosters fix",
+    "description": "Returns old beta minecart boosters to working.",
+    "authors": ["eosl"],
+    "contact": {
+        "homepage": "",
+        "sources": "",
+        "steam": "https://steamcommunity.com/id/true_eosl/"
+    },
+    "license": "CC0-1.0",
+    "environment": "*",
+    "mixins": ["minecart_boosters_fix.mixins.json"],
+    "depends": {
+        "fabricloader": ">=0.13.3"
+    },
+    "suggests": {
+    }
+}

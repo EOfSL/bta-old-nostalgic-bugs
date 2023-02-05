@@ -1,0 +1,16 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "eosl.minecart_boosters_fix",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+    "BoatWaterLift",
+    "LadderGaps",
+    "MinecartBooster",
+    "SouthEastRuleForLiquids"
+  ],
+  "client": [],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
