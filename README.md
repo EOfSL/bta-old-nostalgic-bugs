@@ -1,4 +1,4 @@
-# Some Old Bug Mod for Minecraft BTA
+# Minecraft BTA Old Nostalgic bugs mod
 
 A Babric mod for [Better Than Adventure mod](https://www.minecraftforum.net/forums/mapping-and-modding-java-edition/minecraft-mods/3106066-better-than-adventure-for-beta-1-7-3-timely) 1.7.6.2_02.
 
