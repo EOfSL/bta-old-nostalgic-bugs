@@ -1,9 +1,9 @@
 {
     "schemaVersion": 1,
-    "id": "minecart_boosters_fix",
+    "id": "nostalgic_bugs",
     "version": "${version}",
-    "name": "Minecart boosters fix",
-    "description": "Returns old beta minecart boosters to working.",
+    "name": "Minecart BTA Nostalgic Bugs Mod",
+    "description": "Returns a few old beta minecart bugs.",
     "authors": ["eosl"],
     "contact": {
         "homepage": "",
@@ -12,7 +12,9 @@
     },
     "license": "CC0-1.0",
     "environment": "*",
-    "mixins": ["minecart_boosters_fix.mixins.json"],
+    "mixins": [
+      "nostalgic_bugs.mixins.json"
+    ],
     "depends": {
         "fabricloader": ">=0.13.3"
     },
