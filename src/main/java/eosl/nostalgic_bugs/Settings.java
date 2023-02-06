@@ -15,7 +15,7 @@ public class Settings
 	public final boolean m_ladderGaps;
 	public final boolean m_minecartBoosters;
 	public final boolean m_southEastRuleForLiquids;
-	@Range(from = 0, to = Integer.MAX_VALUE)
+	@Range(from = 1, to = Integer.MAX_VALUE)
 	public final int m_fireTickRate;
 	public final boolean m_infiniteFireSpread;
 
@@ -50,8 +50,8 @@ public class Settings
 		int fireTickRate = getProperty(properties, "fireTickRate", 10);
 		m_infiniteFireSpread = getProperty(properties, "infiniteFireSpread", true);
 
-		if (fireTickRate < 0) {
-			NostalgicBugsMod.g_logger.error("Option [" + "fireTickRate" + "] is negative");
+		if (fireTickRate < 1) {
+			NostalgicBugsMod.g_logger.error("Option [" + "fireTickRate" + "] must be greater than 0. It set now ot 10");
 			m_fireTickRate = 10;
 		}
 		else
@@ -73,8 +73,8 @@ public class Settings
 		int fireTickRate = getProperty(a_settings, "fireTickRate", 10);
 		m_infiniteFireSpread = getProperty(a_settings, "infiniteFireSpread", true);
 
-		if (fireTickRate < 0) {
-			NostalgicBugsMod.g_logger.error("Option [" + "fireTickRate" + "] is negative");
+		if (fireTickRate < 1) {
+			NostalgicBugsMod.g_logger.error("Option [" + "fireTickRate" + "] must be greater than 0. It set now ot 10");
 			m_fireTickRate = 10;
 		}
 		else
