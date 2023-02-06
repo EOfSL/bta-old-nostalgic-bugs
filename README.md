@@ -9,6 +9,6 @@ Brings back some old nostalgic bugs from older Minecraft versions:
 4. [Water ladders](https://minecraft.fandom.com/wiki/Tutorials/Water_ladder): entities can get into water/lava through corners (or signs) on west and north sides of them (also known as south-east rule).
 5. Fast and infinite fire spreading from alpha Minecraft (Thanks to [Amb0s](https://github.com/Amb0s) for the solution).
 
-Use file "nostalgic_bugs.cfg" if a root of server/client to configure the mod. It will be generated on first run.
+Use file "nostalgic_bugs.cfg" in a root of server/client to configure the mod. It will be generated on first run.
 
 Thanks to [OldDays mod](https://www.minecraftforum.net/forums/mapping-and-modding-java-edition/minecraft-mods/1275907-olddays-nbxlite-spawnhuman-ssp-sspc) ([on GitHub](https://github.com/Exalm/Minecraft-mods)) for hints.
