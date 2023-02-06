@@ -1,5 +1,6 @@
-package eosl.minecart_boosters_fix;
+package eosl.nostalgic_bugs.features;
 
+import eosl.nostalgic_bugs.NostalgicBugsMod;
 import net.minecraft.src.Block;
 import net.minecraft.src.EntityLiving;
 import net.minecraft.src.MathHelper;
@@ -16,13 +17,17 @@ public class LadderGaps
 	@Inject(method = "isOnLadder", at = @At("HEAD"), cancellable = true)
 	public void increaseLadderCoverage(@NotNull CallbackInfoReturnable<Boolean> cir)
 	{
-		EntityLiving self = ((EntityLiving) ((Object) this));
-		int i = MathHelper.floor_double(self.posX);
-		int j = MathHelper.floor_double(self.boundingBox.minY);
-		int k = MathHelper.floor_double(self.posZ);
+		if (!NostalgicBugsMod.g_settings.m_ladderGaps)
+			return;
 
-		int id1 = self.worldObj.getBlockId(i, j, k);
-		int id2 = self.worldObj.getBlockId(i, j + 1, k);
+		EntityLiving self = ((EntityLiving) ((Object) this));
+		int x = MathHelper.floor_double(self.posX);
+		int yd = MathHelper.floor_double(self.boundingBox.minY);
+		int yu = MathHelper.floor_double(self.boundingBox.maxY);
+		int z = MathHelper.floor_double(self.posZ);
+
+		int id1 = self.worldObj.getBlockId(x, yd, z);
+		int id2 = self.worldObj.getBlockId(x, yu, z);
 
 		cir.setReturnValue(id1 == Block.ladderOak.blockID || id2 == Block.ladderOak.blockID);
 	}

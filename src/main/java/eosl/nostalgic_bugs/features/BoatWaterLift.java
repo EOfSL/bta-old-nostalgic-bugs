@@ -1,5 +1,6 @@
-package eosl.minecart_boosters_fix;
+package eosl.nostalgic_bugs.features;
 
+import eosl.nostalgic_bugs.NostalgicBugsMod;
 import net.minecraft.src.*;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.Constant;
@@ -12,6 +13,9 @@ public class BoatWaterLift
 	@ModifyConstant(method = "onUpdate", constant = @Constant(doubleValue = 1.0, ordinal = 1))
 	private double dConditionDestroyer(double d)
 	{
-		return Double.MAX_VALUE;
+		if (NostalgicBugsMod.g_settings.m_boatWaterLift)
+			return Double.MAX_VALUE;
+		else
+			return d;
 	}
 }

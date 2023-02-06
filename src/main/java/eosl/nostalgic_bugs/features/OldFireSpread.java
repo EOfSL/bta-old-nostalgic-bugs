@@ -1,5 +1,6 @@
-package eosl.minecart_boosters_fix;
+package eosl.nostalgic_bugs.features;
 
+import eosl.nostalgic_bugs.NostalgicBugsMod;
 import net.minecraft.src.Block;
 import net.minecraft.src.BlockFire;
 import net.minecraft.src.World;
@@ -18,7 +19,7 @@ public class OldFireSpread
 	private int changeTickRate(int a)
 	{
 		// It is 10 in beta before 1.6:
-		return 10;
+		return NostalgicBugsMod.g_settings.m_fireTickRate;
 	}
 
 
@@ -27,7 +28,8 @@ public class OldFireSpread
 	private boolean infiniteSpreading(@NotNull World world, int x, int y, int z, int id, int meta)
 	{
 		// Make new fire blocks spawn with zero old:
-		world.setBlockAndMetadataWithNotify(x, y, z, Block.fire.blockID, 0);
+		if (NostalgicBugsMod.g_settings.m_infiniteFireSpread)
+			world.setBlockAndMetadataWithNotify(x, y, z, Block.fire.blockID, 0);
 		return false;
 	}
 

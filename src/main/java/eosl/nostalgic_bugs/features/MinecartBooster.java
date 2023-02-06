@@ -1,5 +1,6 @@
-package eosl.minecart_boosters_fix;
+package eosl.nostalgic_bugs.features;
 
+import eosl.nostalgic_bugs.NostalgicBugsMod;
 import net.minecraft.src.*;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -16,6 +17,9 @@ public class MinecartBooster
 	)
 	private double d6ConditionDestroyer(double d6)
 	{
-		return 0;
+		if (NostalgicBugsMod.g_settings.m_minecartBoosters)
+			return 0;
+		else
+			return d6;
 	}
 }

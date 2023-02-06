@@ -1,7 +1,7 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "eosl.minecart_boosters_fix",
+  "package": "eosl.nostalgic_bugs.features",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
     "BoatWaterLift",

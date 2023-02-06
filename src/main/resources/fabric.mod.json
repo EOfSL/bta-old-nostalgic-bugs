@@ -7,11 +7,16 @@
     "authors": ["eosl"],
     "contact": {
         "homepage": "",
-        "sources": "",
+        "sources": "https://github.com/EOfSL/bta-old-nostalgic-bugs",
         "steam": "https://steamcommunity.com/id/true_eosl/"
     },
     "license": "CC0-1.0",
     "environment": "*",
+    "entrypoints": {
+        "main": [
+            "eosl.nostalgic_bugs.NostalgicBugsMod"
+        ]
+    },
     "mixins": [
       "nostalgic_bugs.mixins.json"
     ],

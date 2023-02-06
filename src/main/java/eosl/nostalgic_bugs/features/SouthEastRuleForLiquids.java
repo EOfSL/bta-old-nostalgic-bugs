@@ -1,5 +1,6 @@
-package eosl.minecart_boosters_fix;
+package eosl.nostalgic_bugs.features;
 
+import eosl.nostalgic_bugs.NostalgicBugsMod;
 import net.minecraft.src.AxisAlignedBB;
 import net.minecraft.src.Entity;
 import net.minecraft.src.Material;
@@ -16,6 +17,9 @@ public class SouthEastRuleForLiquids
 	@Inject(method = "handleWaterMovement", at = @At("HEAD"), cancellable = true)
 	private void waterInject(@NotNull CallbackInfoReturnable<Boolean> cir)
 	{
+		if (!NostalgicBugsMod.g_settings.m_southEastRuleForLiquids)
+			return;
+
 		// Just remove negative expanding of aabb:
 		Entity self = ((Entity) ((Object) this));
 		AxisAlignedBB aabb = self.boundingBox.expand(0.0, -0.4000000059604645, 0.0);
@@ -27,6 +31,9 @@ public class SouthEastRuleForLiquids
 	@Inject(method = "handleLavaMovement", at = @At("HEAD"), cancellable = true)
 	private void lavaInject(@NotNull CallbackInfoReturnable<Boolean> cir)
 	{
+		if (!NostalgicBugsMod.g_settings.m_southEastRuleForLiquids)
+			return;
+
 		// Just remove negative expanding of aabb:
 		Entity self = ((Entity) ((Object) this));
 		AxisAlignedBB aabb = self.boundingBox.expand(0.0, -0.4000000059604645, 0.0);
