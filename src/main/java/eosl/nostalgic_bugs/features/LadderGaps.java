@@ -23,7 +23,7 @@ public class LadderGaps
 		EntityLiving self = ((EntityLiving) ((Object) this));
 		int x = MathHelper.floor_double(self.posX);
 		int yd = MathHelper.floor_double(self.boundingBox.minY);
-		int yu = MathHelper.floor_double(self.boundingBox.maxY);
+		int yu = yd + 1;
 		int z = MathHelper.floor_double(self.posZ);
 
 		int id1 = self.worldObj.getBlockId(x, yd, z);
